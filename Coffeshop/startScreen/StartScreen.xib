@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartScreen" customModule="Coffeshop" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="mwu-nN-YIE">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0X-Ki-Urv">
+                    <rect key="frame" x="25" y="716.66666666666663" width="343" height="46.333333333333371"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Get Started">
+                        <backgroundConfiguration key="background">
+                            <color key="backgroundColor" red="0.73725497719999999" green="0.49803921579999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </backgroundConfiguration>
+                        <fontDescription key="titleFontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="23"/>
+                        <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="pushController:" destination="-1" eventType="touchUpInside" id="Pqj-BI-oTj"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="O2c-gu-27u">
+                    <rect key="frame" x="25" y="453.00000000000006" width="343" height="233.66666666666669"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fall in Love with Coffee in Blissful Delight!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4g-LS-Vyq">
+                            <rect key="frame" x="0.0" y="0.0" width="331" height="174"/>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="41"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to our cozy coffee corner, where every cup is a delightful for you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qp-sa-y3c">
+                            <rect key="frame" x="0.0" y="194" width="343" height="39.666666666666657"/>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="mwu-nN-YIE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1qr-Qs-2PK"/>
+                <constraint firstAttribute="bottom" secondItem="mwu-nN-YIE" secondAttribute="bottom" id="2BQ-kK-qC4"/>
+                <constraint firstItem="mwu-nN-YIE" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="62W-Lw-nfN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="R0X-Ki-Urv" secondAttribute="bottom" constant="55" id="Iys-cz-f4p"/>
+                <constraint firstAttribute="trailing" secondItem="O2c-gu-27u" secondAttribute="trailing" constant="25" id="Pja-vx-dgr"/>
+                <constraint firstItem="R0X-Ki-Urv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="dZx-1o-bwD"/>
+                <constraint firstItem="O2c-gu-27u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="jN2-rG-KoC"/>
+                <constraint firstItem="mwu-nN-YIE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rLU-ve-ayA"/>
+                <constraint firstItem="R0X-Ki-Urv" firstAttribute="top" secondItem="O2c-gu-27u" secondAttribute="bottom" constant="30" id="wjx-EK-Xho"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="R0X-Ki-Urv" secondAttribute="trailing" constant="25" id="wrg-Fl-mDz"/>
+            </constraints>
+            <point key="canvasLocation" x="52.671755725190835" y="-12.67605633802817"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background" width="774" height="1161"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
