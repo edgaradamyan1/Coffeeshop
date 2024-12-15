@@ -1,15 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="meR-NA-HBy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xPJ-WL-gI5">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Start Screen View Controller-->
+        <scene sceneID="92s-TQ-zXO">
+            <objects>
+                <viewController id="kyT-D0-Ura" customClass="StartScreenViewController" customModule="Coffeshop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bge-Qm-9eF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="vQw-LD-6Ns">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soc-kl-Koh">
+                                <rect key="frame" x="25" y="671.66666666666663" width="343" height="46.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get Started">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.73725497719999999" green="0.49803921579999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="23"/>
+                                    <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pushToTabBar:" destination="kyT-D0-Ura" eventType="touchUpInside" id="Jjf-fi-yAg"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ow8-7u-sfA">
+                                <rect key="frame" x="30" y="413.00000000000006" width="333" height="228.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fall in Love with Coffee in Blissful Delight!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6W-2Y-b2q">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="174"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="41"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to our cozy coffee corner, where every cup is a delightful for you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBa-un-a3Z">
+                                        <rect key="frame" x="0.0" y="189" width="333" height="39.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9aQ-Jo-fO9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="vQw-LD-6Ns" secondAttribute="bottom" id="63i-FE-V6f"/>
+                            <constraint firstItem="Ow8-7u-sfA" firstAttribute="top" secondItem="9aQ-Jo-fO9" secondAttribute="top" constant="310" id="6GC-sk-Bdd"/>
+                            <constraint firstItem="Ow8-7u-sfA" firstAttribute="leading" secondItem="9aQ-Jo-fO9" secondAttribute="leading" constant="30" id="7qf-JR-mpa"/>
+                            <constraint firstItem="vQw-LD-6Ns" firstAttribute="top" secondItem="bge-Qm-9eF" secondAttribute="top" id="CWz-bC-7f8"/>
+                            <constraint firstItem="soc-kl-Koh" firstAttribute="leading" secondItem="9aQ-Jo-fO9" secondAttribute="leading" constant="25" id="Hfp-ZQ-ju1"/>
+                            <constraint firstItem="vQw-LD-6Ns" firstAttribute="top" secondItem="bge-Qm-9eF" secondAttribute="top" id="NEd-kb-p0X"/>
+                            <constraint firstItem="soc-kl-Koh" firstAttribute="top" secondItem="Ow8-7u-sfA" secondAttribute="bottom" constant="30" id="Ykb-Lj-94G"/>
+                            <constraint firstItem="vQw-LD-6Ns" firstAttribute="trailing" secondItem="9aQ-Jo-fO9" secondAttribute="trailing" id="fF1-RM-Qvw"/>
+                            <constraint firstItem="vQw-LD-6Ns" firstAttribute="leading" secondItem="9aQ-Jo-fO9" secondAttribute="leading" id="fb9-kO-jtS"/>
+                            <constraint firstAttribute="bottom" secondItem="vQw-LD-6Ns" secondAttribute="bottom" id="iPD-Ny-MDT"/>
+                            <constraint firstAttribute="trailing" secondItem="Ow8-7u-sfA" secondAttribute="trailing" constant="30" id="npQ-OA-BTd"/>
+                            <constraint firstItem="9aQ-Jo-fO9" firstAttribute="trailing" secondItem="soc-kl-Koh" secondAttribute="trailing" constant="25" id="tdA-wD-xCQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SSK-hd-OnD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="95a-1h-adK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1446.5648854961833" y="-511.26760563380282"/>
+        </scene>
         <!--Tabbar-->
         <scene sceneID="nTW-PR-nEc">
             <objects>
-                <tabBarController id="meR-NA-HBy" customClass="Tabbar" customModule="Coffeshop" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Tabbar" id="meR-NA-HBy" customClass="Tabbar" customModule="Coffeshop" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sgm-bM-iue">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -18,7 +86,34 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YkA-hn-9bh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1332" y="-471"/>
+            <point key="canvasLocation" x="2215" y="-511"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IFh-tW-N6X">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xPJ-WL-gI5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jwg-BE-1gP">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kyT-D0-Ura" kind="relationship" relationship="rootViewController" id="1wt-rA-9M6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bRV-Vi-0hR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="-511"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="774" height="1161"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
