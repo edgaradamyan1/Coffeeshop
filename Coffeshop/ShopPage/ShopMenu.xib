@@ -60,7 +60,7 @@
                             <size key="shadowOffset" width="7" height="-7"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nt0-B8-5x7">
-                            <rect key="frame" x="15" y="5" width="83" height="18.666666666666668"/>
+                            <rect key="frame" x="25" y="5" width="48" height="18.666666666666668"/>
                             <color key="backgroundColor" red="0.85882353779999998" green="0.36078432199999999" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -70,9 +70,9 @@
                     <color key="backgroundColor" red="0.56078433989999998" green="0.45098042490000001" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="140" id="62w-Mu-qkK"/>
-                        <constraint firstItem="nt0-B8-5x7" firstAttribute="leading" secondItem="jeH-zd-KwY" secondAttribute="leading" constant="15" id="BsO-at-9id"/>
+                        <constraint firstItem="nt0-B8-5x7" firstAttribute="leading" secondItem="jeH-zd-KwY" secondAttribute="leading" constant="25" id="BsO-at-9id"/>
                         <constraint firstItem="sII-Kp-UQq" firstAttribute="top" secondItem="nt0-B8-5x7" secondAttribute="bottom" constant="5" id="DBj-XJ-EKQ"/>
-                        <constraint firstAttribute="trailing" secondItem="nt0-B8-5x7" secondAttribute="trailing" constant="295" id="ECU-f2-qiN"/>
+                        <constraint firstAttribute="trailing" secondItem="nt0-B8-5x7" secondAttribute="trailing" constant="320" id="ECU-f2-qiN"/>
                         <constraint firstItem="sII-Kp-UQq" firstAttribute="leading" secondItem="jeH-zd-KwY" secondAttribute="leading" constant="5" id="LXO-XA-CNM"/>
                         <constraint firstItem="nt0-B8-5x7" firstAttribute="top" secondItem="jeH-zd-KwY" secondAttribute="top" constant="5" id="Qyd-QW-Hzi"/>
                         <constraint firstAttribute="trailing" secondItem="sII-Kp-UQq" secondAttribute="trailing" constant="115" id="gHX-Zm-P7t"/>
@@ -93,7 +93,7 @@
                 </segmentedControl>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VAl-gr-GW4">
                     <rect key="frame" x="0.0" y="431" width="393" height="421"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" red="0.97647058959999999" green="0.97647058959999999" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RsK-eA-N04">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -101,25 +101,52 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qf2-tL-u82">
+                    <rect key="frame" x="30" y="64" width="333" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngm-Xh-M5o">
+                            <rect key="frame" x="0.0" y="0.0" width="333" height="21.666666666666668"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yerevan, Armenia " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8T-DD-Cbh">
+                            <rect key="frame" x="0.0" y="29.666666666666671" width="333" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" systemColor="systemGray5Color"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="G8T-DD-Cbh" firstAttribute="leading" secondItem="Qf2-tL-u82" secondAttribute="leading" id="5Lw-ES-RHm"/>
+                        <constraint firstAttribute="bottom" secondItem="G8T-DD-Cbh" secondAttribute="bottom" id="XZv-Ow-bkQ"/>
+                        <constraint firstAttribute="trailing" secondItem="Ngm-Xh-M5o" secondAttribute="trailing" id="ukY-gA-1AX"/>
+                        <constraint firstAttribute="trailing" secondItem="G8T-DD-Cbh" secondAttribute="trailing" id="zau-dn-KuH"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fJM-wJ-GaK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0LZ-BM-ZaQ"/>
                 <constraint firstItem="XIf-j9-axg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="35j-ct-7IF"/>
+                <constraint firstItem="Qf2-tL-u82" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="4df-YM-c6y"/>
                 <constraint firstItem="fYk-DB-pn7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="90" id="5ZA-rY-GtF"/>
                 <constraint firstItem="VAl-gr-GW4" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8GW-Gc-vlH"/>
                 <constraint firstItem="fYk-DB-pn7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Cmp-Jl-J7B"/>
                 <constraint firstItem="jeH-zd-KwY" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="D6H-RP-3OL"/>
                 <constraint firstItem="VAl-gr-GW4" firstAttribute="top" secondItem="XIf-j9-axg" secondAttribute="bottom" constant="15" id="PYa-Sj-cdD"/>
                 <constraint firstItem="jeH-zd-KwY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ShN-ZL-wwi"/>
+                <constraint firstItem="Qf2-tL-u82" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="VS7-Z7-VsD"/>
                 <constraint firstItem="jeH-zd-KwY" firstAttribute="top" secondItem="fYk-DB-pn7" secondAttribute="bottom" constant="20" id="WgH-ij-gYW"/>
                 <constraint firstItem="fJM-wJ-GaK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Ybg-Y2-R8l"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fYk-DB-pn7" secondAttribute="trailing" constant="30" id="Zce-y4-4iX"/>
                 <constraint firstAttribute="bottom" secondItem="VAl-gr-GW4" secondAttribute="bottom" id="dRD-gN-Tgo"/>
                 <constraint firstItem="XIf-j9-axg" firstAttribute="top" secondItem="jeH-zd-KwY" secondAttribute="bottom" constant="15" id="eaj-ye-kqE"/>
                 <constraint firstItem="VAl-gr-GW4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fPX-t6-UYh"/>
+                <constraint firstItem="fYk-DB-pn7" firstAttribute="top" secondItem="Qf2-tL-u82" secondAttribute="bottom" constant="35" id="od7-Ux-FV7"/>
                 <constraint firstItem="fJM-wJ-GaK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="rXS-Ii-baF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Qf2-tL-u82" secondAttribute="trailing" constant="30" id="ueQ-lQ-OfK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XIf-j9-axg" secondAttribute="trailing" constant="20" id="y3F-TZ-APw"/>
             </constraints>
             <point key="canvasLocation" x="-3176.3358778625952" y="34.507042253521128"/>
@@ -133,6 +160,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

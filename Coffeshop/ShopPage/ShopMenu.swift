@@ -9,7 +9,7 @@ import UIKit
 
 class ShopMenu: UIViewController {
   
-  var menuProducts: [CoffeProducts] = [
+  public var menuProducts: [CoffeProducts] = [
     CoffeProducts(name: "Cappucino", price: "2.70 €", description: "When foam takes center stage.", picture: UIImage(named: "cappuccino")),
     CoffeProducts(name: "Latte Macchiato", price: "2.50 €", description: "Milk with a coffee tan.", picture: UIImage(named: "latteMachiatto")),
     CoffeProducts(name: "Espresso", price: "1.99 €", description: "The legal way to wake up in 30 seconds.", picture: UIImage(named: "esspresso")),
@@ -21,7 +21,7 @@ class ShopMenu: UIViewController {
   @IBOutlet weak var promoText: UILabel!
   @IBOutlet weak var promo: UILabel!
   @IBOutlet weak var collectionView: UICollectionView!
-
+  
   @IBOutlet weak var segmentControl: UISegmentedControl!
   
   
@@ -31,7 +31,7 @@ class ShopMenu: UIViewController {
     
     
     promo.layer.masksToBounds = true
-    promo.layer.cornerRadius = 18
+    promo.layer.cornerRadius = 10
     segmentControl.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 9)], for: .normal)
     
     
@@ -49,7 +49,7 @@ class ShopMenu: UIViewController {
 
 extension ShopMenu : UICollectionViewDelegate,UICollectionViewDataSource{
   
-
+  
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     menuProducts.count
     
@@ -69,12 +69,22 @@ extension ShopMenu : UICollectionViewDelegate,UICollectionViewDataSource{
   }
   
   
-  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let vc = ProductViewController(nibName: "ProductViewController", bundle: nil)
+    navigationController?.pushViewController(vc, animated: true)
+    vc.selectedProduct = menuProducts[indexPath.row]
+  }
   
 }
 extension ShopMenu: UICollectionViewDelegateFlowLayout{
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    .init(width: collectionView.frame.width / 2 - 10 , height: collectionView.frame.height / 2 - 10 )
+    let cellWidth: CGFloat = collectionView.frame.width / 2 - 10
+    
+    return .init(
+      width: cellWidth,
+      height: cellWidth * 1.50
+    )
+    
   }
   
   
