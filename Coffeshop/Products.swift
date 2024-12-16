@@ -10,7 +10,7 @@ import UIKit
 
 struct CoffeProducts{
   let name: String
-  let price: String
+  let price: Double
   let description: String
   let picture: UIImage?
 }

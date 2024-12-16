@@ -10,10 +10,10 @@ import UIKit
 class ShopMenu: UIViewController {
   
   public var menuProducts: [CoffeProducts] = [
-    CoffeProducts(name: "Cappucino", price: "2.70 €", description: "When foam takes center stage.", picture: UIImage(named: "cappuccino")),
-    CoffeProducts(name: "Latte Macchiato", price: "2.50 €", description: "Milk with a coffee tan.", picture: UIImage(named: "latteMachiatto")),
-    CoffeProducts(name: "Espresso", price: "1.99 €", description: "The legal way to wake up in 30 seconds.", picture: UIImage(named: "esspresso")),
-    CoffeProducts(name: "Cafe Latte", price: "2.50 €", description: "Milk and Coffee", picture: UIImage(named: "latte"))
+    CoffeProducts(name: "Cappucino", price: 2.70, description: "When foam takes center stage.", picture: UIImage(named: "cappuccino")),
+    CoffeProducts(name: "Latte Macchiato", price: 2.50, description: "Milk with a coffee tan.", picture: UIImage(named: "latteMachiatto")),
+    CoffeProducts(name: "Espresso", price: 1.90 , description: "The legal way to wake up in 30 seconds.", picture: UIImage(named: "esspresso")),
+    CoffeProducts(name: "Cafe Latte", price: 2.50, description: "Milk and Coffee", picture: UIImage(named: "latte"))
     
     
   ]
@@ -61,7 +61,7 @@ extension ShopMenu : UICollectionViewDelegate,UICollectionViewDataSource{
       let product = menuProducts[indexPath.row]
       cell.titleLabel.text = product.name
       cell.descriptionLabel.text = product.description
-      cell.preisLabel.text = product.price
+      cell.preisLabel.text = "$ " + String(product.price)
       cell.productImage.image = product.picture
       
     }

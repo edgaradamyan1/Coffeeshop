@@ -17,6 +17,7 @@ class MenuCollectionViewCell: UICollectionViewCell {
   override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    productImage.layer.cornerRadius = 10
     }
 
 }
