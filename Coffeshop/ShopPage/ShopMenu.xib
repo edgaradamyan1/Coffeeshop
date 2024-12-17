@@ -13,8 +13,12 @@
                 <outlet property="collectionView" destination="VAl-gr-GW4" id="LOb-pW-zbd"/>
                 <outlet property="promo" destination="nt0-B8-5x7" id="Q3N-Bs-4ja"/>
                 <outlet property="promoText" destination="sII-Kp-UQq" id="D0E-0Q-pCq"/>
-                <outlet property="segmentControl" destination="XIf-j9-axg" id="R1i-WU-TlO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="CategoryButtons" destination="0aT-br-2BL" collectionClass="NSMutableArray" id="VxG-e9-HWT"/>
+                <outletCollection property="CategoryButtons" destination="FiU-v2-kYR" collectionClass="NSMutableArray" id="2Ae-rW-gst"/>
+                <outletCollection property="CategoryButtons" destination="iCC-r5-BHH" collectionClass="NSMutableArray" id="k2U-rQ-slG"/>
+                <outletCollection property="CategoryButtons" destination="vqG-Pf-6R8" collectionClass="NSMutableArray" id="5GR-CU-knc"/>
+                <outletCollection property="CategoryButtons" destination="z9U-Lg-lGp" collectionClass="NSMutableArray" id="DjE-Bq-fyA"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -78,21 +82,8 @@
                         <constraint firstAttribute="trailing" secondItem="sII-Kp-UQq" secondAttribute="trailing" constant="115" id="gHX-Zm-P7t"/>
                     </constraints>
                 </view>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XIf-j9-axg">
-                    <rect key="frame" x="20" y="376" width="353" height="41"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="YLa-9W-AHh"/>
-                    </constraints>
-                    <segments>
-                        <segment title="All Coffee" width="110"/>
-                        <segment title="Cappuccino"/>
-                        <segment title="Latte"/>
-                        <segment title="Esspresso"/>
-                        <segment title="Latte Macchiatto"/>
-                    </segments>
-                </segmentedControl>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VAl-gr-GW4">
-                    <rect key="frame" x="0.0" y="431" width="393" height="421"/>
+                    <rect key="frame" x="0.0" y="467" width="393" height="385"/>
                     <color key="backgroundColor" red="0.97647058959999999" green="0.97647058959999999" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RsK-eA-N04">
                         <size key="itemSize" width="128" height="128"/>
@@ -124,32 +115,121 @@
                         <constraint firstAttribute="trailing" secondItem="G8T-DD-Cbh" secondAttribute="trailing" id="zau-dn-KuH"/>
                     </constraints>
                 </stackView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbE-DG-g2t">
+                    <rect key="frame" x="0.0" y="391" width="393" height="51"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZp-Yf-9fa">
+                            <rect key="frame" x="0.0" y="0.0" width="510" height="51"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aT-br-2BL">
+                                    <rect key="frame" x="14.999999999999993" y="8" width="98.333333333333314" height="34.333333333333336"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="gray" title="All Coffee">
+                                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        <color key="baseBackgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="categoryButtonTaped:" destination="-1" eventType="touchUpInside" id="T01-xK-k8O"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiU-v2-kYR">
+                                    <rect key="frame" x="121.33333333333331" y="8" width="94" height="34.333333333333336"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="gray" title="Machiato">
+                                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        <color key="baseBackgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="categoryButtonTaped:" destination="-1" eventType="touchUpInside" id="ZAc-lP-8bW"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCC-r5-BHH">
+                                    <rect key="frame" x="223.33333333333334" y="8" width="63.000000000000028" height="34.333333333333336"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="gray" title="Latte">
+                                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        <color key="baseBackgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="categoryButtonTaped:" destination="-1" eventType="touchUpInside" id="uCy-2y-2l3"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqG-Pf-6R8">
+                                    <rect key="frame" x="294.33333333333331" y="8" width="105.66666666666669" height="34.333333333333336"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="gray" title="Americano">
+                                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        <color key="baseBackgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="categoryButtonTaped:" destination="-1" eventType="touchUpInside" id="A6z-M6-rQ3"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9U-Lg-lGp">
+                                    <rect key="frame" x="408.33333333333331" y="8" width="93.666666666666686" height="34.333333333333336"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="gray" title="Espresso">
+                                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        <color key="baseBackgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="categoryButtonTaped:" destination="-1" eventType="touchUpInside" id="Ctr-IY-TUF"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="0aT-br-2BL" firstAttribute="top" secondItem="SZp-Yf-9fa" secondAttribute="top" constant="8" id="6Fj-JD-9GU"/>
+                                <constraint firstAttribute="trailing" secondItem="z9U-Lg-lGp" secondAttribute="trailing" constant="8" id="A53-3h-hCy"/>
+                                <constraint firstItem="vqG-Pf-6R8" firstAttribute="top" secondItem="SZp-Yf-9fa" secondAttribute="top" constant="8" id="IYt-55-XxF"/>
+                                <constraint firstItem="iCC-r5-BHH" firstAttribute="top" secondItem="SZp-Yf-9fa" secondAttribute="top" constant="8" id="NV4-Kf-mPZ"/>
+                                <constraint firstItem="vqG-Pf-6R8" firstAttribute="leading" secondItem="iCC-r5-BHH" secondAttribute="trailing" constant="8" id="Oz7-qg-gSA"/>
+                                <constraint firstItem="FiU-v2-kYR" firstAttribute="leading" secondItem="0aT-br-2BL" secondAttribute="trailing" constant="8" id="Peo-oI-Cap"/>
+                                <constraint firstItem="FiU-v2-kYR" firstAttribute="top" secondItem="SZp-Yf-9fa" secondAttribute="top" constant="8" id="dZk-4J-uxE"/>
+                                <constraint firstItem="0aT-br-2BL" firstAttribute="leading" secondItem="SZp-Yf-9fa" secondAttribute="leading" constant="15" id="eTP-0D-xSy"/>
+                                <constraint firstItem="iCC-r5-BHH" firstAttribute="leading" secondItem="FiU-v2-kYR" secondAttribute="trailing" constant="8" id="gkd-2v-plH"/>
+                                <constraint firstItem="z9U-Lg-lGp" firstAttribute="top" secondItem="SZp-Yf-9fa" secondAttribute="top" constant="8" id="kbJ-wD-aDB"/>
+                                <constraint firstAttribute="width" constant="510" id="rpa-Fe-8Fi"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="SZp-Yf-9fa" firstAttribute="height" secondItem="qbE-DG-g2t" secondAttribute="height" id="EwG-mi-yJv"/>
+                        <constraint firstItem="SZp-Yf-9fa" firstAttribute="leading" secondItem="qbE-DG-g2t" secondAttribute="leading" id="OB9-WE-CbZ"/>
+                        <constraint firstItem="SZp-Yf-9fa" firstAttribute="top" secondItem="qbE-DG-g2t" secondAttribute="top" id="Zkq-W3-cCm"/>
+                        <constraint firstAttribute="bottom" secondItem="SZp-Yf-9fa" secondAttribute="bottom" id="cLb-MR-F9h"/>
+                        <constraint firstAttribute="trailing" secondItem="SZp-Yf-9fa" secondAttribute="trailing" id="sfO-ej-XgS"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="ZRV-xt-llh"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="4aY-cL-x1e"/>
+                </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fJM-wJ-GaK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0LZ-BM-ZaQ"/>
-                <constraint firstItem="XIf-j9-axg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="35j-ct-7IF"/>
                 <constraint firstItem="Qf2-tL-u82" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="4df-YM-c6y"/>
                 <constraint firstItem="fYk-DB-pn7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="90" id="5ZA-rY-GtF"/>
                 <constraint firstItem="VAl-gr-GW4" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8GW-Gc-vlH"/>
                 <constraint firstItem="fYk-DB-pn7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Cmp-Jl-J7B"/>
                 <constraint firstItem="jeH-zd-KwY" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="D6H-RP-3OL"/>
-                <constraint firstItem="VAl-gr-GW4" firstAttribute="top" secondItem="XIf-j9-axg" secondAttribute="bottom" constant="15" id="PYa-Sj-cdD"/>
+                <constraint firstItem="qbE-DG-g2t" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="FNX-yO-pLS"/>
+                <constraint firstItem="VAl-gr-GW4" firstAttribute="top" secondItem="qbE-DG-g2t" secondAttribute="bottom" constant="25" id="KMy-DF-WIA"/>
                 <constraint firstItem="jeH-zd-KwY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ShN-ZL-wwi"/>
                 <constraint firstItem="Qf2-tL-u82" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="VS7-Z7-VsD"/>
+                <constraint firstItem="qbE-DG-g2t" firstAttribute="top" secondItem="jeH-zd-KwY" secondAttribute="bottom" constant="30" id="Vth-6Z-Chw"/>
                 <constraint firstItem="jeH-zd-KwY" firstAttribute="top" secondItem="fYk-DB-pn7" secondAttribute="bottom" constant="20" id="WgH-ij-gYW"/>
                 <constraint firstItem="fJM-wJ-GaK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Ybg-Y2-R8l"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fYk-DB-pn7" secondAttribute="trailing" constant="30" id="Zce-y4-4iX"/>
+                <constraint firstItem="qbE-DG-g2t" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bDj-Op-oml"/>
                 <constraint firstAttribute="bottom" secondItem="VAl-gr-GW4" secondAttribute="bottom" id="dRD-gN-Tgo"/>
-                <constraint firstItem="XIf-j9-axg" firstAttribute="top" secondItem="jeH-zd-KwY" secondAttribute="bottom" constant="15" id="eaj-ye-kqE"/>
                 <constraint firstItem="VAl-gr-GW4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fPX-t6-UYh"/>
+                <constraint firstItem="VAl-gr-GW4" firstAttribute="top" secondItem="jeH-zd-KwY" secondAttribute="bottom" constant="106" id="jUo-g8-hFk"/>
                 <constraint firstItem="fYk-DB-pn7" firstAttribute="top" secondItem="Qf2-tL-u82" secondAttribute="bottom" constant="35" id="od7-Ux-FV7"/>
                 <constraint firstItem="fJM-wJ-GaK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="rXS-Ii-baF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Qf2-tL-u82" secondAttribute="trailing" constant="30" id="ueQ-lQ-OfK"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XIf-j9-axg" secondAttribute="trailing" constant="20" id="y3F-TZ-APw"/>
             </constraints>
-            <point key="canvasLocation" x="-3176.3358778625952" y="34.507042253521128"/>
+            <point key="canvasLocation" x="-3170.2290076335876" y="31.690140845070424"/>
         </view>
     </objects>
     <resources>

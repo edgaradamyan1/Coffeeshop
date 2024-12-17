@@ -22,7 +22,8 @@ class ShopMenu: UIViewController {
   @IBOutlet weak var promo: UILabel!
   @IBOutlet weak var collectionView: UICollectionView!
   
-  @IBOutlet weak var segmentControl: UISegmentedControl!
+  @IBOutlet var CategoryButtons: [UIButton]!
+  
   
   
   override func viewDidLoad() {
@@ -32,7 +33,7 @@ class ShopMenu: UIViewController {
     
     promo.layer.masksToBounds = true
     promo.layer.cornerRadius = 10
-    segmentControl.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 9)], for: .normal)
+    //segmentControl.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 9)], for: .normal)
     
     
     collectionView.delegate = self
@@ -43,7 +44,11 @@ class ShopMenu: UIViewController {
     
   }
   
-  
+
+  @IBAction func categoryButtonTaped(_ sender: UIButton) {
+    
+ 
+  }
   
 }
 
@@ -89,3 +94,4 @@ extension ShopMenu: UICollectionViewDelegateFlowLayout{
   
   
 }
+
