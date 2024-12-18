@@ -16,21 +16,30 @@ class OrderViewController: UIViewController {
     return textField
   }()
   
+  var products: CoffeProducts?
+  
+  @IBOutlet weak var productName: UILabel!
+  @IBOutlet weak var productDescription: UILabel!
   @IBOutlet weak var adressLabel: UILabel!
   @IBOutlet weak var deliveryMethodLabel: UILabel!
   @IBOutlet weak var orderMethodControl: UISegmentedControl!
+  @IBOutlet weak var productImage: UIImageView!
+  @IBOutlet weak var priceLabel: UILabel!
   
-
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      view.addSubview(hiddenTextField)
-      hiddenTextField.delegate = self
-      orderMethodControl.selectedSegmentTintColor = UIColor(named: "customColor")
-      orderMethodControl.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    view.addSubview(hiddenTextField)
+    hiddenTextField.delegate = self
+    orderMethodControl.selectedSegmentTintColor = UIColor(named: "customColor")
+    orderMethodControl.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+    productName.text = products?.name
+    productDescription.text = products?.description
+    if let preis = products?.price{
+      priceLabel.text = "$ " + String(preis)
     }
-
+  }
+  
   @IBAction func editAdressButton(_ sender: UIButton) {
     hiddenTextField.becomeFirstResponder()
   }
@@ -45,8 +54,8 @@ class OrderViewController: UIViewController {
     }
   }
   
-    
- 
+  
+  
 }
 
 extension OrderViewController: UITextFieldDelegate{

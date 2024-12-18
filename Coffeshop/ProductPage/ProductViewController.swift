@@ -56,4 +56,9 @@ class ProductViewController: UIViewController {
     }
   }
   
+  @IBAction func orderButton(_ sender: UIButton) {
+    let vc = OrderViewController(nibName: "OrderViewController", bundle: nil)
+    navigationController?.pushViewController(vc, animated: true)
+    vc.products = selectedProduct
+  }
 }

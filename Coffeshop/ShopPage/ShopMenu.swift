@@ -46,8 +46,7 @@ class ShopMenu: UIViewController {
   
 
   @IBAction func categoryButtonTaped(_ sender: UIButton) {
-    
- 
+  
   }
   
 }
